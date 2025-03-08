@@ -2,8 +2,16 @@
 let = amigo = [];
 
 function agregarAmigo(){
+    // Ingreso de nombre
     let input_amigo = document.getElementById("amigo");
-    let amigo = input_amigo.value;
+    let nombre_amigo = input_amigo.value;
 
-    console.log(amigo);
+    //console.log(amigo);
+    // Validación de agregar nombre
+    if(!nombre_amigo){
+        alert("Debes ingresar un nombre");
+        return;
+    }
+    
 }
+
