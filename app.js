@@ -30,4 +30,14 @@ function mostrarAmigos(){
     }
 }
 
+function sortearAmigo(){
+    if(amigo.length === 0){
+        alert("No hay amigos para sorterar");
+        return;
+    }
+    // Sortear amigo de forma aleatoria
+    let amigoSorteado = amigo[Math.floor(Math.random() * amigo.length)];
+    let resultado = document.getElementById("resultado");
+    resultado.innerHTML = `El amigo Soretedo es: ${amigoSorteado}`;
 
+}
