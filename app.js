@@ -6,12 +6,28 @@ function agregarAmigo(){
     let input_amigo = document.getElementById("amigo");
     let nombre_amigo = input_amigo.value;
 
-    //console.log(amigo);
+    //console.log(nombre_amigo);
     // Validación de agregar nombre
     if(!nombre_amigo){
         alert("Debes ingresar un nombre");
         return;
     }
-    
+    // Agregar nombre de amigo 
+    amigo.push(nombre_amigo);
+    input_amigo.value = "";
+    input_amigo.focus();
+    mostrarAmigos();
 }
+
+function mostrarAmigos(){
+    let lista_amigos = document.getElementById("listaAmigos");
+    lista_amigos.innerHTML = "";
+
+    for(let i = 0; i < amigo.length; i++){
+        let item = document.createElement("li");
+        item.textContent = amigo[i];
+        lista_amigos.appendChild(item)
+    }
+}
+
 
